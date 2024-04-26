@@ -61,7 +61,7 @@ max_wav_duration=20  # Maximum duration in second.
 
 # Tokenization related
 token_type=bpe      # Tokenization type (char or bpe).
-nbpe=30             # The number of BPE vocabulary.
+nbpe=952             # The number of BPE vocabulary.
 bpemode=unigram     # Mode of BPE (unigram or bpe).
 oov="<unk>"         # Out of vocabulary symbol.
 blank="<blank>"     # CTC blank symbol
@@ -88,7 +88,7 @@ lm_args=          # Arguments for language model training, e.g., "--max_epoch 10
 use_word_lm=false # Whether to use word language model.
 num_splits_lm=1   # Number of splitting for lm corpus.
 # shellcheck disable=SC2034
-word_vocab_size=10000 # Size of word vocabulary.
+word_vocab_size=1000 # Size of word vocabulary.
 use_prompt=false # Use prompt ids for multi tasking
 use_lang_prompt=false # Use language prompt ids for multi lingual multi tasking
 use_nlp_prompt=false # Use text prompt ids for multi lingual multi tasking

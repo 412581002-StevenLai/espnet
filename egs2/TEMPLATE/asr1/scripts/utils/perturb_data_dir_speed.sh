@@ -36,7 +36,7 @@ fi
 factor=$1
 srcdir=$2
 destdir=$3
-label="sp"
+label="speed"
 spk_prefix="${label}${factor}-"
 utt_prefix="${label}${factor}-"
 

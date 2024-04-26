@@ -18,16 +18,16 @@ use_wordlm=false
 
 # speed perturbation related
 # (train_set will be "${train_set}_sp" if speed_perturb_factors is specified)
-speed_perturb_factors="0.9 1.0 1.1"
+speed_perturb_factors="1.0"
 
 ./asr.sh \
-    --nj 32 \
-    --inference_nj 32 \
-    --ngpu 4 \
-    --lang zh \
+    --nj 12 \
+    --inference_nj 12 \
+    --ngpu 2 \
+    --lang en \
     --audio_format "flac.ark" \
     --feats_type raw \
-    --token_type char \
+    --token_type bpe \
     --use_lm ${use_lm}                                 \
     --use_word_lm ${use_wordlm}                        \
     --lm_config "${lm_config}"                         \
@@ -40,4 +40,5 @@ speed_perturb_factors="0.9 1.0 1.1"
     --asr_speech_fold_length 512 \
     --asr_text_fold_length 150 \
     --lm_fold_length 150 \
-    --lm_train_text "data/${train_set}/text" "$@"
+    --lm_train_text "data/${train_set}/text" \
+    --bpe_train_text "data/${train_set}/text" "$@"
